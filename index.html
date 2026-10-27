@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happiest Birthday! 💙</title>
+    <title>Happiest Birthday! 💙✨</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;1,400&family=Sacramento&display=swap" rel="stylesheet">
     <style>
         * {
@@ -17,8 +17,8 @@
             background-image: 
                 radial-gradient(#a3b1c6 1.5px, transparent 1.5px), 
                 radial-gradient(#a3b1c6 1.5px, #d1d8e0 1.5px);
-            background-size: 28px 28px;
-            background-position: 0 0, 14px 14px;
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
             min-height: 100vh;
             font-family: 'Playfair Display', serif;
             display: flex;
@@ -36,26 +36,27 @@
             height: 1120px;
             overflow: hidden;
             border-radius: 8px;
-            box-shadow: 0 25px 50px rgba(15, 30, 50, 0.3);
+            box-shadow: 0 25px 50px rgba(15, 30, 50, 0.35);
         }
 
-        /* Paper Background Page */
+        /* Scrapbook Page Background */
         .page {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #ede6dc;
-            background-image: linear-gradient(to right, rgba(200, 190, 175, 0.2) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(200, 190, 175, 0.2) 1px, transparent 1px);
-            background-size: 20px 20px;
+            background: #f4eee3;
+            background-image: 
+                linear-gradient(to right, rgba(180, 165, 145, 0.15) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(180, 165, 145, 0.15) 1px, transparent 1px);
+            background-size: 25px 25px;
             border: 12px solid #fff;
-            box-shadow: inset 0 0 40px rgba(160, 140, 120, 0.3);
+            box-shadow: inset 0 0 50px rgba(150, 130, 110, 0.25);
             padding: 20px;
             opacity: 0;
             visibility: hidden;
-            transform: scale(0.94) translateY(20px);
+            transform: scale(0.93) translateY(25px);
             transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
             pointer-events: none;
         }
@@ -67,23 +68,23 @@
             pointer-events: auto;
         }
 
-        /* Vintage Blue Photo Frames */
+        /* Ornate Vintage Photo Frames */
         .frame-box {
             position: absolute;
-            background: #20354a;
-            padding: 14px 14px 14px 14px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
-            border: 6px solid #6b8fae;
-            outline: 2px dashed #3a5875;
-            outline-offset: -10px;
+            background: #1b2e4b;
+            padding: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 5px solid #6b8fae;
+            outline: 2px solid #2d4663;
+            outline-offset: -8px;
             z-index: 3;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             cursor: pointer;
         }
 
         .frame-box:hover {
-            transform: scale(1.05) rotate(0deg) !important;
-            box-shadow: 0 22px 40px rgba(0,0,0,0.45);
+            transform: scale(1.04) rotate(0deg) !important;
+            box-shadow: 0 22px 45px rgba(0,0,0,0.5);
             z-index: 10;
         }
 
@@ -92,104 +93,111 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            filter: contrast(1.05) brightness(0.98);
+            filter: contrast(1.05) brightness(0.96);
         }
 
-        /* Sticker Header Text */
+        /* Sticker Header Title */
         .sticker-title {
             position: absolute;
             top: 25px;
             left: 35px;
             background: #ffffff;
-            padding: 8px 25px;
+            padding: 8px 28px;
             border-radius: 40px;
-            box-shadow: 3px 5px 12px rgba(0,0,0,0.15);
-            border: 2px solid #82a0bc;
+            box-shadow: 3px 6px 15px rgba(0,0,0,0.15);
+            border: 2px solid #7da0bc;
             font-family: 'Sacramento', cursive;
-            font-size: 3.8rem;
-            color: #172a3a;
+            font-size: 4rem;
+            color: #1b2e4b;
             transform: rotate(-6deg);
             z-index: 4;
             line-height: 1;
         }
 
-        /* Page Layout Frames */
-        /* PAGE 1 */
-        .p1-f1 { top: 35px; right: 35px; width: 310px; height: 230px; transform: rotate(3deg); }
-        .p1-f2 { top: 380px; left: 35px; width: 340px; height: 260px; transform: rotate(-4deg); }
-        .p1-f3 { bottom: 35px; right: 40px; width: 330px; height: 230px; transform: rotate(2deg); }
+        /* Page 1 Frame Layout */
+        .p1-f1 { top: 40px; right: 40px; width: 310px; height: 230px; transform: rotate(3deg); }
+        .p1-f2 { top: 380px; left: 40px; width: 340px; height: 260px; transform: rotate(-4deg); }
+        .p1-f3 { bottom: 40px; right: 45px; width: 330px; height: 230px; transform: rotate(2deg); }
 
-        /* PAGE 2 */
-        .p2-f1 { top: 40px; left: 35px; width: 320px; height: 240px; transform: rotate(-3deg); }
-        .p2-f2 { top: 360px; right: 35px; width: 340px; height: 250px; transform: rotate(4deg); }
-        .p2-f3 { bottom: 40px; left: 40px; width: 320px; height: 230px; transform: rotate(-2deg); }
+        /* Page 2 Frame Layout */
+        .p2-f1 { top: 45px; left: 40px; width: 320px; height: 240px; transform: rotate(-3deg); }
+        .p2-f2 { top: 365px; right: 40px; width: 340px; height: 250px; transform: rotate(4deg); }
+        .p2-f3 { bottom: 45px; left: 45px; width: 320px; height: 230px; transform: rotate(-2deg); }
 
-        /* PAGE 3 */
-        .p3-f1 { top: 35px; right: 35px; width: 330px; height: 250px; transform: rotate(3deg); }
-        .p3-f2 { top: 370px; left: 35px; width: 320px; height: 240px; transform: rotate(-3deg); }
-        .p3-f3 { bottom: 35px; right: 40px; width: 340px; height: 240px; transform: rotate(4deg); }
+        /* Page 3 Frame Layout */
+        .p3-f1 { top: 40px; right: 40px; width: 330px; height: 250px; transform: rotate(3deg); }
+        .p3-f2 { top: 375px; left: 40px; width: 320px; height: 240px; transform: rotate(-3deg); }
+        .p3-f3 { bottom: 40px; right: 45px; width: 340px; height: 240px; transform: rotate(4deg); }
 
-        /* Note Cards */
+        /* Handwritten Note Cards */
         .note-paper {
             position: absolute;
-            background: #ded1be;
+            background: #e6dac5;
             padding: 22px;
-            box-shadow: 4px 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 4px 8px 22px rgba(0,0,0,0.16);
             z-index: 4;
-            border-left: 5px solid #a8947f;
-            border-radius: 4px;
+            border-left: 5px solid #9c846d;
+            border-radius: 3px;
         }
 
         .note-paper p {
             font-family: 'Caveat', cursive;
-            font-size: 1.6rem;
-            color: #1a1a1a;
+            font-size: 1.65rem;
+            color: #1f1f1f;
             line-height: 1.35;
             font-weight: 700;
         }
 
-        .p1-note { top: 320px; right: 45px; width: 340px; transform: rotate(1.5deg); }
-        .p2-note { top: 110px; right: 45px; width: 350px; transform: rotate(-2deg); }
-        .p3-note { bottom: 330px; right: 45px; width: 350px; transform: rotate(2deg); }
+        .p1-note { top: 325px; right: 50px; width: 340px; transform: rotate(1.5deg); }
+        .p2-note { top: 110px; right: 50px; width: 350px; transform: rotate(-2deg); }
+        .p3-note { bottom: 335px; right: 50px; width: 350px; transform: rotate(2deg); }
 
-        /* SVG Blue Floral & Vintage Decor Elements */
+        /* SVG Blue Floral & Butterfly Animations */
         .decor-svg {
             position: absolute;
             z-index: 5;
             pointer-events: none;
-            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+            filter: drop-shadow(3px 5px 8px rgba(0,0,0,0.25));
         }
 
-        /* Top Blue Flower */
+        @keyframes floatWing {
+            0% { transform: scaleX(1) rotate(0deg); }
+            50% { transform: scaleX(0.7) rotate(3deg); }
+            100% { transform: scaleX(1) rotate(0deg); }
+        }
+
+        .animated-butterfly {
+            top: 155px;
+            left: 230px;
+            width: 210px;
+            transform: rotate(8deg);
+            animation: floatGently 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatGently {
+            0% { transform: translateY(0px) rotate(8deg); }
+            100% { transform: translateY(-8px) rotate(11deg); }
+        }
+
         .flower-top {
             top: -10px;
             left: -10px;
-            width: 150px;
+            width: 160px;
             transform: rotate(-10deg);
         }
 
-        /* Big Butterfly */
-        .butterfly-center {
-            top: 150px;
-            left: 220px;
-            width: 220px;
-            transform: rotate(8deg);
-        }
-
-        /* Bottom Blue Tulip */
         .flower-bottom {
             bottom: -20px;
             left: -10px;
             width: 260px;
         }
 
-        /* Blue Lips Stamp */
         .lips-stamp {
-            width: 90px;
-            opacity: 0.85;
+            width: 95px;
+            opacity: 0.9;
         }
 
-        /* Navigation Buttons */
+        /* Navigation Controls */
         .nav-container {
             display: flex;
             align-items: center;
@@ -207,7 +215,7 @@
             font-size: 1.1rem;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(27,46,75,0.3);
+            box-shadow: 0 5px 15px rgba(27,46,75,0.35);
             transition: all 0.3s ease;
         }
 
@@ -220,6 +228,7 @@
             background: #9bb0c4;
             cursor: not-allowed;
             transform: none;
+            box-shadow: none;
         }
 
         .page-indicator {
@@ -245,11 +254,9 @@
 
         <!-- ================= PAGE 1 ================= -->
         <div class="page active" id="page-1">
-            
-            <!-- Header Sticker -->
             <div class="sticker-title">happy birthday</div>
 
-            <!-- SVG Blue Flower Top Left -->
+            <!-- Blue Flower Top Left -->
             <svg class="decor-svg flower-top" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="12" fill="#2c4d6f"/>
                 <path d="M50 20 C35 0, 15 20, 35 40 Z" fill="#4a709c"/>
@@ -262,45 +269,35 @@
                 <path d="M30 70 C10 90, 0 70, 25 55 Z" fill="#3a5f87"/>
             </svg>
 
-            <!-- SVG Blue Butterfly Center -->
-            <svg class="decor-svg butterfly-center" viewBox="0 0 120 100">
-                <!-- Left Wing -->
-                <path d="M60 50 C10 0, -10 40, 40 60 C10 70, 20 95, 60 55" fill="#2c5282" opacity="0.9"/>
+            <!-- Animated Blue Butterfly -->
+            <svg class="decor-svg animated-butterfly" viewBox="0 0 120 100">
+                <path d="M60 50 C10 0, -10 40, 40 60 C10 70, 20 95, 60 55" fill="#2c5282" opacity="0.95"/>
                 <path d="M60 50 C25 15, 10 40, 45 55" fill="#5b8fcc"/>
-                <!-- Right Wing -->
-                <path d="M60 50 C110 0, 130 40, 80 60 C110 70, 100 95, 60 55" fill="#1d3b60" opacity="0.9"/>
+                <path d="M60 50 C110 0, 130 40, 80 60 C110 70, 100 95, 60 55" fill="#1d3b60" opacity="0.95"/>
                 <path d="M60 50 C95 15, 110 40, 75 55" fill="#4274b0"/>
-                <!-- Body -->
                 <ellipse cx="60" cy="52" rx="3" ry="18" fill="#0d1b2a"/>
             </svg>
 
-            <!-- Blue Lip Stamps -->
-            <svg class="decor-svg lips-stamp" style="top: 250px; right: 30px; transform: rotate(15deg);" viewBox="0 0 100 60">
+            <!-- Lips Stamp -->
+            <svg class="decor-svg lips-stamp" style="top: 260px; right: 35px; transform: rotate(15deg);" viewBox="0 0 100 60">
                 <path d="M10 30 Q30 10 50 25 Q70 10 90 30 Q50 35 10 30 Z" fill="#2b5284"/>
                 <path d="M15 35 Q50 55 85 35 Q50 42 15 35 Z" fill="#1e3a5f"/>
             </svg>
 
             <!-- 3 Photos -->
-            <div class="frame-box p1-f1">
-                <img src="jpg1" alt="Photo 1">
-            </div>
-            <div class="frame-box p1-f2">
-                <img src="jpg2" alt="Photo 2">
-            </div>
-            <div class="frame-box p1-f3">
-                <img src="jpg3" alt="Photo 3">
-            </div>
+            <div class="frame-box p1-f1"><img src="jpg1" alt="Photo 1"></div>
+            <div class="frame-box p1-f2"><img src="jpg2" alt="Photo 2"></div>
+            <div class="frame-box p1-f3"><img src="jpg3" alt="Photo 3"></div>
 
-            <!-- Note Paper 1 -->
+            <!-- Note 1 -->
             <div class="note-paper p1-note">
                 <p>happiest birthday dear. Hope ur day will be full of fun and cute smiles. I'm tooooo lucky to have u as such a part of my life. Not just a part u mean everything to me. Maybe I can't be best to u but thank u for help me to live my life the way better. I love u as much as I can. byyyy enjoy ur special day. 💙✨</p>
             </div>
 
-            <!-- SVG Blue Tulip Bottom Left -->
+            <!-- Blue Tulip Bottom -->
             <svg class="decor-svg flower-bottom" viewBox="0 0 120 160">
                 <path d="M60 160 Q50 100 60 70" stroke="#3d5a45" stroke-width="6" fill="none"/>
                 <path d="M60 110 Q20 90 35 70 Q55 85 60 110" fill="#4d6e55"/>
-                <!-- Flower Petals -->
                 <path d="M60 70 C30 40, 20 10, 45 0 C55 20, 60 50, 60 70 Z" fill="#2b5284"/>
                 <path d="M60 70 C90 40, 100 10, 75 0 C65 20, 60 50, 60 70 Z" fill="#4274b0"/>
                 <path d="M45 40 C55 10, 65 10, 75 40 C65 60, 55 60, 45 40 Z" fill="#6897d4"/>
@@ -309,33 +306,24 @@
 
         <!-- ================= PAGE 2 ================= -->
         <div class="page" id="page-2">
-            
             <div class="sticker-title" style="top: 25px; right: 35px; left: auto; transform: rotate(4deg);">sweet memories</div>
 
-            <!-- SVG Blue Butterfly -->
-            <svg class="decor-svg butterfly-center" style="top: 220px; left: 40px; transform: rotate(-12deg);" viewBox="0 0 120 100">
+            <svg class="decor-svg animated-butterfly" style="top: 220px; left: 40px; transform: rotate(-12deg);" viewBox="0 0 120 100">
                 <path d="M60 50 C10 0, -10 40, 40 60 C10 70, 20 95, 60 55" fill="#2c5282"/>
                 <path d="M60 50 C110 0, 130 40, 80 60 C110 70, 100 95, 60 55" fill="#1d3b60"/>
                 <ellipse cx="60" cy="52" rx="3" ry="18" fill="#0d1b2a"/>
             </svg>
 
             <!-- 3 Photos -->
-            <div class="frame-box p2-f1">
-                <img src="jpg4" alt="Photo 4">
-            </div>
-            <div class="frame-box p2-f2">
-                <img src="jpg5" alt="Photo 5">
-            </div>
-            <div class="frame-box p2-f3">
-                <img src="jpg6" alt="Photo 6">
-            </div>
+            <div class="frame-box p2-f1"><img src="jpg4" alt="Photo 4"></div>
+            <div class="frame-box p2-f2"><img src="jpg5" alt="Photo 5"></div>
+            <div class="frame-box p2-f3"><img src="jpg6" alt="Photo 6"></div>
 
-            <!-- Note Paper 2 -->
+            <!-- Note 2 -->
             <div class="note-paper p2-note">
                 <p>Every single moment with you feels so magical and special. You bring so much bright energy, cute smiles, and endless joy into my life! Keep shining always! 🌸💙</p>
             </div>
 
-            <!-- Lips Stamp -->
             <svg class="decor-svg lips-stamp" style="bottom: 50px; right: 40px; transform: rotate(-10deg);" viewBox="0 0 100 60">
                 <path d="M10 30 Q30 10 50 25 Q70 10 90 30 Q50 35 10 30 Z" fill="#2b5284"/>
                 <path d="M15 35 Q50 55 85 35 Q50 42 15 35 Z" fill="#1e3a5f"/>
@@ -344,10 +332,8 @@
 
         <!-- ================= PAGE 3 ================= -->
         <div class="page" id="page-3">
-            
             <div class="sticker-title" style="top: 25px; left: 35px; transform: rotate(-3deg);">forever & always</div>
 
-            <!-- SVG Blue Flower Top Right -->
             <svg class="decor-svg flower-top" style="top: -10px; right: -10px; left: auto; transform: rotate(20deg);" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="12" fill="#2c4d6f"/>
                 <path d="M50 20 C35 0, 15 20, 35 40 Z" fill="#4a709c"/>
@@ -357,17 +343,11 @@
             </svg>
 
             <!-- 3 Photos -->
-            <div class="frame-box p3-f1">
-                <img src="jpg7" alt="Photo 7">
-            </div>
-            <div class="frame-box p3-f2">
-                <img src="jpg8" alt="Photo 8">
-            </div>
-            <div class="frame-box p3-f3">
-                <img src="jpg9" alt="Photo 9">
-            </div>
+            <div class="frame-box p3-f1"><img src="jpg7" alt="Photo 7"></div>
+            <div class="frame-box p3-f2"><img src="jpg8" alt="Photo 8"></div>
+            <div class="frame-box p3-f3"><img src="jpg9" alt="Photo 9"></div>
 
-            <!-- Note Paper 3 -->
+            <!-- Note 3 -->
             <div class="note-paper p3-note">
                 <p>Wishing you the happiest birthday filled with love, laughter, and all your favorite things! Thank you for being such an extraordinary part of my world. Enjoy your day to the fullest! 🎂✨💙</p>
             </div>
@@ -375,7 +355,7 @@
 
     </div>
 
-    <!-- Controls -->
+    <!-- Navigation Controls -->
     <div class="nav-container">
         <button class="btn-nav" id="prevBtn" onclick="changePage(-1)" disabled>❮ Previous</button>
         <span class="page-indicator" id="pageNum">Page 1 of 3</span>
