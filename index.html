@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiest Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #e6dfd5;
+            /* Vintage paper texture effect */
+            background-image: radial-gradient(#d3c8b8 1px, transparent 1px), radial-gradient(#d3c8b8 1px, #e6dfd5 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .scrapbook-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 1100px;
+            background: #ede6dc;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border: 1px solid #d1c7b7;
+            overflow: hidden;
+        }
+
+        /* Background vintage decorations */
+        .decor {
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Happy Birthday Header */
+        .hb-text {
+            top: 25px;
+            left: 45px;
+            font-family: 'Caveat', cursive;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #2b3a4a;
+            transform: rotate(-5deg);
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.6);
+        }
+
+        /* Blue Flower Top Left */
+        .flower-tl {
+            top: -15px;
+            left: -15px;
+            width: 130px;
+            transform: rotate(-15deg);
+        }
+
+        /* Miffy Bunny */
+        .miffy {
+            top: 155px;
+            left: 75px;
+            width: 75px;
+            transform: rotate(10deg);
+        }
+
+        /* Blue Butterfly Center */
+        .butterfly-center {
+            top: 150px;
+            left: 240px;
+            width: 250px;
+            transform: rotate(10deg);
+            z-index: 3;
+        }
+
+        /* Jellyfish / Sea elements */
+        .jellyfish {
+            top: 390px;
+            left: 430px;
+            width: 110px;
+        }
+
+        /* Lips stamps */
+        .lips-1 {
+            top: 240px;
+            right: 40px;
+            width: 100px;
+            transform: rotate(15deg);
+        }
+
+        .lips-2 {
+            top: 530px;
+            left: 435px;
+            width: 90px;
+            transform: rotate(-25deg);
+        }
+
+        .lips-3 {
+            bottom: 25px;
+            right: 35px;
+            width: 110px;
+            transform: rotate(10deg);
+        }
+
+        /* Vintage Picture Frames */
+        .frame-box {
+            position: absolute;
+            background: #2b3a4a;
+            padding: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border: 4px solid #7da0b8;
+            z-index: 3;
+        }
+
+        .frame-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: contrast(1.05) brightness(0.95);
+        }
+
+        /* Frame 1 (Top Right) */
+        .f1 {
+            top: 35px;
+            right: 40px;
+            width: 280px;
+            height: 220px;
+            transform: rotate(3deg);
+            border-image: linear-gradient(to bottom, #8bb0c7, #4a6b82) 1;
+        }
+
+        /* Frame 2 (Middle Left) */
+        .f2 {
+            top: 390px;
+            left: 40px;
+            width: 330px;
+            height: 255px;
+            transform: rotate(-4deg);
+        }
+
+        /* Frame 3 (Bottom Right) */
+        .f3 {
+            bottom: 30px;
+            right: 40px;
+            width: 320px;
+            height: 210px;
+            transform: rotate(2deg);
+        }
+
+        /* Big Blue Flower Bottom Left */
+        .flower-bl {
+            bottom: -30px;
+            left: -20px;
+            width: 280px;
+            transform: rotate(10deg);
+            z-index: 4;
+        }
+
+        /* Cloud / Sky element */
+        .cloud-bg {
+            bottom: 0;
+            left: 0;
+            width: 350px;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        /* Star elements */
+        .star-1 {
+            bottom: 205px;
+            left: 390px;
+            width: 50px;
+            transform: rotate(-15deg);
+        }
+        .star-2 {
+            bottom: 155px;
+            left: 425px;
+            width: 35px;
+            transform: rotate(20deg);
+        }
+
+        /* Message Note Paper */
+        .note-paper {
+            position: absolute;
+            top: 330px;
+            right: 60px;
+            width: 340px;
+            background: #dfcfbc;
+            padding: 25px;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.1);
+            transform: rotate(1.5deg);
+            z-index: 3;
+            border-left: 3px solid #c2b19b;
+        }
+
+        .note-paper p {
+            font-family: 'Caveat', cursive;
+            font-size: 1.6rem;
+            color: #2b2b2b;
+            line-height: 1.35;
+            font-weight: 600;
+        }
+
+        @media(max-width: 950px) {
+            .scrapbook-container {
+                transform: scale(0.65);
+                transform-origin: center;
+                margin: -150px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scrapbook-container">
+        <!-- Background Assets (Tumio ekhane tomar image links/PNGs use korte parbe) -->
+        <img src="https://i.ibb.co/3yk876g/blue-flower.png" class="decor flower-tl" alt="flower">
+        
+        <div class="decor hb-text">happy<br>birthday</div>
+
+        <img src="https://i.ibb.co/6y1563N/miffy.png" class="decor miffy" alt="miffy">
+        <img src="https://i.ibb.co/5G7J06S/blue-butterfly.png" class="decor butterfly-center" alt="butterfly">
+        <img src="https://i.ibb.co/8901235/jellyfish.png" class="decor jellyfish" alt="jellyfish">
+        
+        <img src="https://i.ibb.co/7z90123/lips.png" class="decor lips-1" alt="lips">
+        <img src="https://i.ibb.co/7z90123/lips.png" class="decor lips-2" alt="lips">
+        <img src="https://i.ibb.co/7z90123/lips.png" class="decor lips-3" alt="lips">
+
+        <!-- Photo Frame 1 -->
+        <div class="frame-box f1">
+            <img src="PHOTO_1_LINK_HERE.jpg" alt="Birthday Girl">
+        </div>
+
+        <!-- Photo Frame 2 -->
+        <div class="frame-box f2">
+            <img src="PHOTO_2_LINK_HERE.jpg" alt="Birthday Girl">
+        </div>
+
+        <!-- Message Note -->
+        <div class="note-paper">
+            <p>happiest birthday dear. Hope ur day will be full of fun and cute smiles. I'm tooooo lucky to have u as such a part of my life. Not just a part u mean everything to me. Maybe I can't be best to u but thank u for help me to live my life the way better. I love u as much as I can. byyyy enjoy ur special day.</p>
+        </div>
+
+        <!-- Photo Frame 3 -->
+        <div class="frame-box f3">
+            <img src="PHOTO_3_LINK_HERE.jpg" alt="Birthday Girl">
+        </div>
+
+        <!-- Bottom Decorations -->
+        <img src="https://i.ibb.co/1234567/blue-tulip.png" class="decor flower-bl" alt="tulip">
+        <img src="https://i.ibb.co/9876543/cloud.png" class="decor cloud-bg" alt="cloud">
+        <img src="https://i.ibb.co/5554443/star.png" class="decor star-1" alt="star">
+        <img src="https://i.ibb.co/5554443/star.png" class="decor star-2" alt="star">
+    </div>
+
+</body>
+</html>
